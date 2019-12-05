@@ -1,0 +1,154 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "String",
+      "lastName": "String",
+      "dateOfBirth": "string",
+      "mobileNumber": "string",
+      "address": "String",
+      "emailId": "String",
+      "accountType": "String",
+      "userName": "String",
+      "password": "String"
+    },
+    {
+      "firstName": "ram",
+      "lastName": "",
+      "userName": "aa",
+      "emailId": "ram2@gmail.com",
+      "password": "ram",
+      "dateOfBirth": "2019-12-22T18:30:00.000Z",
+      "mobileNumber": 7777777777,
+      "address": "yyyyy",
+      "accountType": "1",
+      "id": 2
+    },
+    {
+      "firstName": "ram1",
+      "lastName": "",
+      "userName": "ram123",
+      "emailId": "ram1@gmail.com",
+      "password": "rama",
+      "dateOfBirth": "2019-12-29T18:30:00.000Z",
+      "mobileNumber": 9999999999,
+      "address": "yyyyy",
+      "accountType": "1",
+      "id": 3
+    },
+    {
+      "firstName": "ram",
+      "lastName": "ram",
+      "userName": "aa",
+      "emailId": "ram3@gmail.com",
+      "password": "ram3",
+      "dateOfBirth": "2019-12-24T18:30:00.000Z",
+      "mobileNumber": 8888888888,
+      "address": "ram3",
+      "accountType": "1",
+      "id": 4
+    },
+    {
+      "firstName": "ram",
+      "lastName": "ram",
+      "userName": "ram3123",
+      "emailId": "ram2@gmail.com",
+      "password": "ram123",
+      "dateOfBirth": "2019-12-23T18:30:00.000Z",
+      "mobileNumber": 9999999999,
+      "address": "yyyyy",
+      "accountType": "1",
+      "id": 5
+    }
+  ],
+  "account-details": [
+    {
+      "id": 1,
+      "account_no": 100001,
+      "balance": 4000,
+      "account_satus": "string",
+      "account_type": "String",
+      "customerId": 4
+    }
+  ],
+  "account-transactions": [
+    {
+      "transaction_id": 1,
+      "transactionType": "credit",
+      "transactionAmount": 500,
+      "transactionDescription": "lend",
+      "fromAccount": 100001,
+      "toAccount": 200011,
+      "transactionDate": "2019-12-05"
+    }
+  ],
+  "account-list": [
+    {
+      "id": 1,
+      "accountNumber": "100001",
+      "message": "this is sample text",
+      "statusCode:integer": 1
+    },
+    {
+      "id": 2,
+      "accountNumber": "200001",
+      "message": "this is sample text",
+      "statusCode:integer": 1
+    },
+    {
+      "id": 3,
+      "accountNumber": "200001",
+      "message": "this is sample text",
+      "statusCode:integer": 1
+    }
+  ],
+  "funds-transfer": [
+    {
+      "id": 1,
+      "transactionType": "credit",
+      "transactionAmount": 500,
+      "transactionDescription": "lend",
+      "fromAccount": 100001,
+      "toAccount": 200011,
+      "transactionDate": "2019-12-05"
+    },
+    {
+      "transactionAmount": 66666,
+      "fromAccount": "100001",
+      "toAccount": "100001",
+      "transactionDescription": "6666",
+      "id": 2
+    },
+    {
+      "transactionAmount": 88888,
+      "fromAccount": "200001",
+      "toAccount": "200001",
+      "transactionDescription": "6666",
+      "id": 3
+    },
+    {
+      "transactionAmount": 777,
+      "fromAccount": "200001",
+      "toAccount": "200001",
+      "transactionDescription": "6666",
+      "id": 4
+    },
+    {
+      "transactionAmount": 777777,
+      "fromAccount": "200001",
+      "toAccount": "200001",
+      "transactionDescription": "6666",
+      "id": 5
+    },
+    {
+      "transactionAmount": 88888,
+      "fromAccount": "100001",
+      "toAccount": "100001",
+      "transactionDescription": "6666",
+      "id": 6
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

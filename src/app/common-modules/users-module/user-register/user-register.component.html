@@ -1,0 +1,110 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="assets/images/banner1.jpg" style="padding-top: 25%;"/>
+
+        </div>
+
+        <div class="col-lg-6">
+
+            <div class="signup-form" style="margin-top: 60px;">
+                <form [formGroup]="userRegisterForm" (ngSubmit)="onSubmit()" novalidate>
+                    <div class="header-title">
+                        <h2>Sign Up</h2>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" name="firstName" formControlName="firstName"
+                            [ngClass]="{ 'is-invalid':  (firstName.dirty || firstName.touched) && firstName.errors }">
+                        <p class="input-error-text"
+                            *ngIf="firstName.invalid  && (firstName.dirty || firstName.touched) && firstName.errors.required">
+                            Enter First Name is mandatory</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" name="lastName" formControlName="lastName"
+                            [ngClass]="{ 'is-invalid':  (lastName.dirty || lastName.touched) && lastName.errors }">
+                        <p class="input-error-text"
+                            *ngIf="lastName.invalid  && (lastName.dirty || lastName.touched) && lastName.errors.required">
+                            Enter Last Name is mandatory</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="userName" formControlName="userName"
+                            [ngClass]="{ 'is-invalid':  (userName.dirty || userName.touched) && userName.errors }">
+                        <p class="input-error-text"
+                            *ngIf="userName.invalid  && (userName.dirty || userName.touched) && userName.errors.required">
+                            Enter user name is mandatory</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Emailaddress</label>
+                        <input type="email" class="form-control" name="userEmail" formControlName="userEmail"
+                            [ngClass]="{ 'is-invalid':  (userEmail.dirty || userEmail.touched) && userEmail.errors }">
+                        <p class="input-error-text"
+                            *ngIf="userEmail.invalid  && (userEmail.dirty || userEmail.touched) && userEmail.errors.required">
+                            Enter email address </p>
+                        <p class="input-error-text"
+                            *ngIf="userEmail.invalid  && (userEmail.dirty || userEmail.touched) && userEmail.errors.email">
+                            Enter valid email address</p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="userPassword" formControlName="userPassword"
+                            [ngClass]="{ 'is-invalid':  (userPassword.dirty || userPassword.touched) && userPassword.errors }">
+                        <p class="input-error-text"
+                            *ngIf="userPassword.invalid  && (userPassword.dirty || userPassword.touched) && userPassword.errors.required">
+                            Enter valid password</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm password</label>
+                        <input type="password" class="form-control" name="userConfirmPassword"
+                            formControlName="userConfirmPassword"
+                            [ngClass]="{ 'is-invalid':  (userConfirmPassword.dirty || userConfirmPassword.touched) && userConfirmPassword.errors }">
+                        <p class="input-error-text"
+                            *ngIf="userConfirmPassword.invalid  && (userConfirmPassword.dirty || userConfirmPassword.touched) && userConfirmPassword.errors.required">
+                            Enter Confirm Passwords</p>
+                            <p class="input-error-text"
+                            *ngIf="passwordNotmatchError">
+                            Confirm Password not matched</p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                      <p-calendar type="text" class="form-control" name="dateOfBirth"
+                            formControlName="dateOfBirth" [monthNavigator]="true" [yearNavigator]="true" yearRange="1980:2019"></p-calendar> 
+                         
+                        <p class="input-error-text"
+                            *ngIf="dateOfBirth.invalid  && (dateOfBirth.dirty || dateOfBirth.touched) && dateOfBirth.errors.required">
+                            Enter date of birth</p>
+
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile no</label>
+                        <input type="number" class="form-control" name="mobileNo" formControlName="mobileNo"
+                            [ngClass]="{ 'is-invalid':  (mobileNo.dirty || mobileNo.touched) && mobileNo.errors }" maxlength="10">
+                        <p class="input-error-text"
+                            *ngIf="mobileNo.invalid  && (mobileNo.dirty || mobileNo.touched) && mobileNo.errors.required">
+                            Enter mobile is mandatory</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-control" name="address" formControlName="address"
+                            [ngClass]="{ 'is-invalid':  (address.dirty || address.touched) && address.errors }">
+                        <p class="input-error-text"
+                            *ngIf="address.invalid  && (address.dirty || address.touched) && address.errors.required">
+                            Enter address is mandatory</p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign Up</button>
+                    </div>
+                    <div class="text-center">Already have an account? <span class="register-link"
+                            (click)="goToLogin();">Login here</span></div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
